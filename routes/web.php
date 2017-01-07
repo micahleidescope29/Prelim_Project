@@ -10,6 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+
 Route::group(['middleware' => ['web']], function(){
 	Route::get('/', function () {
     return view('welcome');
@@ -28,7 +29,6 @@ Route::group(['middleware' => ['web']], function(){
 		'uses' => 'UserController@getDashboard', 
 		'as' => 'dashboard'
 	]);
-
 });
 
 
