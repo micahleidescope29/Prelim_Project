@@ -12,6 +12,7 @@
 */
 
 Route::group(['middleware' => ['web']], function(){
+	
 	Route::get('/', function () {
     return view('welcome');
 	});
@@ -29,6 +30,13 @@ Route::group(['middleware' => ['web']], function(){
 		'uses' => 'UserController@getDashboard', 
 		'as' => 'dashboard'
 	]);
+
+	Route::post('/createpost', [
+	    'uses' => 'PostController@postCreatePost',
+	    'as' => 'post.create'
+	]);
+
+
 });
 
 
