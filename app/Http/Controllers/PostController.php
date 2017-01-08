@@ -1,8 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Like;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 
 class PostController extends Controller
 {
@@ -27,4 +31,16 @@ class PostController extends Controller
         }
         return redirect()->route('dashboard')->with(['message' => $message]);
     }
+
+    public function getDeletePost($post_id)
+    {
+        $post = Post::where('id', $post_id)->first();
+        if (Auth::user() != $post->user) {
+            return redirect()->back();
+        }
+        $post->delete();
+        return redirect()->route('dashboard')->with(['message' => 'Successfully deleted!']);
+    }
+
+    
 }
