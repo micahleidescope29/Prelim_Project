@@ -36,7 +36,6 @@ Route::group(['middleware' => ['web']], function(){
 	    'as' => 'post.create'
 	]);
 
-
 });
 
 

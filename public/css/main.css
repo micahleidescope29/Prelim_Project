@@ -19,7 +19,7 @@
     font-style: italic;
 }
 
-/*.error,
+.error,
 .success {
     text-align: center;
 }
@@ -40,4 +40,4 @@
     border: 1px solid green;
     background-color: #d1f9da;
     color: green;
-}*/
+}
