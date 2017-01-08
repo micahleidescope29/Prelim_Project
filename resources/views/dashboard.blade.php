@@ -18,11 +18,14 @@
     <section class="row posts">
     	<div class="col-md-6 col-md-offset-3">
     		<header><h3>What other people say...</h3></header>
+
+            @foreach($posts as $post)
+
     		<article class="post">
-    			<p>The quick brown fox jumps over the lazy dog near the bank of the river.</p>
+    			<p>{{ $post->body }}</p>
     			
     			<div class="info">
-    				Posted by Micah on 29 Oct 2016
+    				Posted by {{ $post->user->first_name }} on {{ $post->created_at }}
     			</div>
 
     			<div class="interaction">
@@ -33,20 +36,8 @@
     			</div>
     		</article>
 
-    		<article class="post">
-    			<p>The quick brown fox jumps over the lazy dog near the bank of the river.</p>
-    			
-    			<div class="info">
-    				Posted by Micah on 29 Oct 2016
-    			</div>
-
-    			<div class="interaction">
-    				<a href="#"> Like </a> |
-    				<a href="#"> Dislike </a> |
-    				<a href="#"> Edit </a> |
-    				<a href="#"> Delete </a> |
-    			</div>
-    		</article>
+            @endforeach
+    		
     	</div>
     </section>
     
