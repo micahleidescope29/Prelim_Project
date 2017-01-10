@@ -11,7 +11,7 @@
 @endif
 @if(Session::has('message'))
     <div class="row">
-        <div class="success col-md-4 col-md-offset-4 success">
+        <div class="col-md-4 col-md-offset-4 success">
             {{Session::get('message')}}
         </div>
     </div>
