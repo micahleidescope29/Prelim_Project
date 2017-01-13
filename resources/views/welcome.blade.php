@@ -6,6 +6,16 @@
 
 @section('content')
     @include('includes.message-block')
+
+
+    <div class="jumbotron">
+        <h1>Welcome to My Page!!</h1>
+        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+      </div>
+
+
+
+
     <div class="row">
         <div class="col-md-6">
             <h3>Sign Up</h3>
