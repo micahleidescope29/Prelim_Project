@@ -30,9 +30,13 @@
 		            </div>
 		            <div class="panel-body">
 		              <h4><b>First Name: </b></h4>
+		              <div class="info"> {{ $user->first_name }} </div>
 		              <h4><b>Last Name: </b></h4>
+		              <div class="info"> {{ $user->last_name }} </div>
 		              <h4><b>Email: </b></h4>
+		              <div class="info"> {{ $user->email }} </div>
 		              <h4><b>Phone Number: </b></h4>
+		              <div class="info"> {{ $user->phone }} </div>
 
 		            </div>
 		        </div>
